@@ -76,6 +76,14 @@ class GameOver(Gamescreen):
         """
         if event.keysym == 'r':
             data.screen = self.mode(data, self.difficult)
+            """if type(self.mode) == Classic():
+                data.screen = Classic(data, self.difficult)
+            elif type(self.mode) == TimeAttack():
+                data.screen = TimeAttack(data, self.difficult)
+            elif type(self.mode) == Geneva:
+                data.screen = Geneva(data, self.difficult)
+            elif type(self.mode) == Zen:
+                data.screen = Zen(data, self.difficult)"""
         elif event.keysym == 'q':
             data.screen = ModeSelect()
 

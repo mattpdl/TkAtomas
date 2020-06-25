@@ -124,24 +124,18 @@ class Game(object):
             clicked = self.selectAtom(event, data)
             if clicked != None:
                 clicked.prevAtom = self
-                clicked = Proton(data, self.board.index(clicked) + 1)
+                clicked = Proton(data, self.board, self.board.index(clicked))
         else:
             self.selectSpace(event, data)
 
     def keyPressed(self, event, data):
         """
-        Places the center element on the gameboard at the position 
-        corresponding to keyboard input. Deprecated feature for testing.
+        Allows the user to quit the current game.
 
         event: obj
         data: Struct
         """
-        key = int(event.keysym)
-        if type(self.board.center) == Electron:
-            self.board.elems[key].move(data, 0)
-        elif key in range(len(self.board.elems)):
-            self.board.center.move(data, key + 1)
-        elif event.keysym == "q":
+        if event.keysym == 'q':
             data.screen = gamescreens.ModeSelect()
     
     def checkForFusion(self, data):

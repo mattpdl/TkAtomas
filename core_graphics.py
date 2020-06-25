@@ -129,7 +129,7 @@ class Neutrino(Cir):
         board: Gameboard
         loc: int
         """
-        super().__init__(data, loc)
+        super().__init__(data, board, loc)
         self.color, self.text = '#fff', ''
 
 class Luxon(Cir):
@@ -141,7 +141,7 @@ class Luxon(Cir):
         board: Gameboard
         loc: int
         """
-        super().__init__(data, loc)
+        super().__init__(data, board, loc)
         self.color, self.text = 'green', '*'
 
 class Gameboard(object):
@@ -162,6 +162,12 @@ class Gameboard(object):
         elem: Cir
         """
         self.elems.insert(loc - 1, elem)
+
+    def index(self, target):
+        for elem, i in enumerate(self.elems):
+            if elem == target:
+                return i+1
+        return -1
 
     def updateElems(self, data):
         """
