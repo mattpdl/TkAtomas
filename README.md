@@ -3,6 +3,8 @@
 ## Project Description
 TkAtomas is a chemistry-inspired puzzle game where the player uses protons to fuse atoms of the same element together to create atoms with a higher atomic number. The game continues until the board is overfilled, or, in Time Attack mode, until time runs out.
 
+![Screenshot of TkAtomas running on macOS](atomas.png)
+
 ## Competitive Analysis
 TkAtomas is based on the iOS and Android game, Atomas, by developer Sirnic Games. Like the mobile version, this implementation will consist of four modes: Classic (play until the board is filed), Time Attack, Geneva (uses luxons, which behave differently from protons), and Zen (provides for easier gameplay). However, scoring is calculated in a much simpler manner.
 
