@@ -1,5 +1,4 @@
 # TkAtomas
-by Matthew Ponce de Leon
 
 ## Project Description
 TkAtomas is a chemistry-inspired puzzle game where the player uses protons to fuse atoms of the same element together to create atoms with a higher atomic number. The game continues until the board is overfilled, or, in Time Attack mode, until time runs out.
